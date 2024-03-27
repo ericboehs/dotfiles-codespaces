@@ -70,3 +70,10 @@ set -g @catppuccin_flavour 'mocha'
 run '~/.tmux/plugins/tpm/tpm'
 EOF
 ~/.tmux/plugins/tpm/bin/install_plugins
+
+# Install nvchad
+sudo apt-get intall -y ripgrep
+git clone https://github.com/NvChad/starter ~/.config/nvim
+nvim &
+pid=$!
+sleep 25; kill $pid
