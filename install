@@ -29,11 +29,20 @@ sudo chsh -s /usr/bin/zsh $USER
 
 mkdir $HOME/bin
 
+# Install stow (dotfile manager)
+sudo apt-get -y install stow
+
 # Install fzf
-FZF_VERSION=0.48.1
-cd $HOME/bin
-curl -L https://github.com/junegunn/fzf/releases/download/${FZF_VERSION}/fzf-${FZF_VERSION}-linux_amd64.tar.gz | tar xzC $HOME/bin
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 cd $HOME
+
+# Install zsh-quickstart-kit
+git clone https://github.com/jandamm/zgenom.git
+git clone https://github.com/unixorn/zsh-quickstart-kit.git .zsh-quickstart-kit
+cd $HOME/.zsh-quickstart-kit
+stow --target=$HOME zsh
+
 
 # Install neovim
 NVIM_VERSION=0.9.5
