@@ -38,6 +38,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 cd $HOME
 
 # Install zsh-quickstart-kit
+rm ~/.zshrc
 git clone https://github.com/jandamm/zgenom.git
 git clone https://github.com/unixorn/zsh-quickstart-kit.git .zsh-quickstart-kit
 cd $HOME/.zsh-quickstart-kit
