@@ -45,8 +45,7 @@ git clone https://github.com/unixorn/zsh-quickstart-kit.git .zsh-quickstart-kit
 cd $HOME/.zsh-quickstart-kit
 stow --target=$HOME zsh
 cp /workspaces/.codespaces/.persistedshare/dotfiles/.p10k.zsh $HOME
-zsh &
-
+zqs disable-ssh-key-listing
 
 # Install neovim
 NVIM_VERSION=0.9.5
