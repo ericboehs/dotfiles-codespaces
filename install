@@ -46,6 +46,7 @@ cd $HOME/.zsh-quickstart-kit
 stow --target=$HOME zsh
 cp /workspaces/.codespaces/.persistedshare/dotfiles/.p10k.zsh $HOME
 zqs disable-ssh-key-listing
+zqs disable-ssh-key-loading
 
 # Install neovim
 NVIM_VERSION=0.9.5
