@@ -30,6 +30,7 @@ sudo chsh -s /usr/bin/zsh $USER
 mkdir $HOME/bin
 
 # Install development tools
+sudo apt-get update -qq
 sudo apt-get -y install stow xclip tmux
 
 # Install fzf
