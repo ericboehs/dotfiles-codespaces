@@ -49,6 +49,9 @@ cp /workspaces/.codespaces/.persistedshare/dotfiles/.p10k.zsh $HOME
 source ~/.zshrc
 zqs disable-ssh-key-listing
 zqs disable-ssh-key-loading
+/usr/bin/zsh &
+pid=$!
+sleep 60; kill $pid
 
 # Install neovim
 NVIM_VERSION=0.9.5
