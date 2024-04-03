@@ -46,6 +46,7 @@ git clone https://github.com/unixorn/zsh-quickstart-kit.git .zsh-quickstart-kit
 cd $HOME/.zsh-quickstart-kit
 stow --target=$HOME zsh
 cp /workspaces/.codespaces/.persistedshare/dotfiles/.p10k.zsh $HOME
+source ~/.zshrc
 zqs disable-ssh-key-listing
 zqs disable-ssh-key-loading
 
