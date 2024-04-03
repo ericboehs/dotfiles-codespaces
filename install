@@ -77,6 +77,6 @@ EOF
 # Install nvchad
 sudo apt-get install -y ripgrep
 git clone https://github.com/NvChad/starter ~/.config/nvim
-nvim &
+~/bin/nvim &
 pid=$!
 sleep 25; kill $pid
