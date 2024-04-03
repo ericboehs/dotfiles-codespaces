@@ -22,15 +22,16 @@ rm .zshrc
 mv .gitconfig .gitconfig.private
 git clone https://github.com/ericboehs/dotfiles .dotfiles.base
 
+# Prep for apt-get installs
+sudo apt-get update -qq
+
 # Install zsh
-sudo-apt-get update
 sudo apt-get install -y zsh
 sudo chsh -s /usr/bin/zsh $USER
 
 mkdir $HOME/bin
 
 # Install development tools
-sudo apt-get update -qq
 sudo apt-get -y install stow xclip tmux
 
 # Install fzf
@@ -52,7 +53,7 @@ zqs disable-ssh-key-loading
 NVIM_VERSION=0.9.5
 cd $HOME/bin
 wget https://github.com/neovim/neovim/releases/download/v${NVIM_VERSION}/nvim-linux64.tar.gz
-tar xzvf nvim-linux64.tar.gz
+tar xzf nvim-linux64.tar.gz
 ln -s $HOME/bin/nvim-linux64/bin/nvim $HOME/bin/nvim
 cd $HOME
 
@@ -73,7 +74,7 @@ EOF
 ~/.tmux/plugins/tpm/bin/install_plugins
 
 # Install nvchad
-sudo apt-get intall -y ripgrep
+sudo apt-get install -y ripgrep
 git clone https://github.com/NvChad/starter ~/.config/nvim
 nvim &
 pid=$!
