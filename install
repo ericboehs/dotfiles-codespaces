@@ -1,7 +1,7 @@
 #! /bin/sh
 
 if [ -z "$USER" ]; then
-    USER=$(id -un)
+	USER=$(id -un)
 fi
 
 echo >&2 "====================================================================="
@@ -45,13 +45,13 @@ git clone https://github.com/jandamm/zgenom.git
 git clone https://github.com/unixorn/zsh-quickstart-kit.git .zsh-quickstart-kit
 cd $HOME/.zsh-quickstart-kit
 stow --target=$HOME zsh
-cp /workspaces/.codespaces/.persistedshare/dotfiles/.p10k.zsh $HOME
-source ~/.zshrc
-zqs disable-ssh-key-listing
-zqs disable-ssh-key-loading
-/usr/bin/zsh &
-pid=$!
-sleep 60; kill $pid
+cp .p10k.zsh $HOME
+# source ~/.zshrc
+# zqs disable-ssh-key-listing
+# zqs disable-ssh-key-loading
+# /usr/bin/zsh &
+# pid=$!
+# sleep 60; kill $pid
 
 # Install neovim
 NVIM_VERSION=0.9.5
@@ -63,7 +63,7 @@ cd $HOME
 
 # Install tpm & catpuccin
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-cat <<'EOF' > ~/.tmux.conf
+cat <<'EOF' >~/.tmux.conf
 set -g @plugin 'tmux-plugins/tpm'
 set -g @plugin 'tmux-plugins/tmux-sensible'
 set -g @plugin 'catppuccin/tmux'
@@ -80,6 +80,7 @@ EOF
 # Install nvchad
 sudo apt-get install -y ripgrep
 git clone https://github.com/NvChad/starter ~/.config/nvim
-~/bin/nvim &
-pid=$!
-sleep 25; kill $pid
+# ~/bin/nvim &
+# pid=$!
+# sleep 25
+# kill $pid
